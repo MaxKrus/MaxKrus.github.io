@@ -7,9 +7,8 @@ describe('Header', () => {
     test('Header name', () => {
         render(<Header tp={0} />);
 
-        //
-        // Expected page title
-        //
+        'Github Actions Workshop'
+
         expect(screen.getByTestId('h1-title').innerHTML).toEqual(
             'Github Actions Workshop'
         );
