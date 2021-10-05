@@ -19,6 +19,14 @@ jobs:
         run: npm ci
       - name: Test
         run: nmp test
+      - name: Run typescript lint and format check
+        run: npm run lint:ts
+      - name: Run styles lint and format check
+        run: npm run lint:css
+      - name: "Hax"
+        run: echo "The best nades are $NADE_TYPE"
+        env:
+          NADE_TYPE: Haxornades!
   deploy:
     needs: build
     runs-on: ubuntu-latest
